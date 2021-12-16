@@ -4,10 +4,10 @@ import 'package:reshop_app/screens/details/details_screen.dart';
 import 'package:reshop_app/screens/home/components/item_card.dart';
 
 import '../../../constants.dart';
-import 'categories.dart';
+import './home/components/categories.dart';
 
-class Body extends StatelessWidget {
-  const Body({Key? key}) : super(key: key);
+class ItemBusqueda extends StatelessWidget {
+  const ItemBusqueda({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class Body extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
             child: GridView.builder(
-                itemCount: products.length,
+                itemCount: productsBusqueda.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   mainAxisSpacing: kDefaultPaddin,
@@ -37,12 +37,12 @@ class Body extends StatelessWidget {
                   childAspectRatio: 0.75,
                 ),
                 itemBuilder: (context, index) => ItemCard(
-                      product: products[index],
+                      product: productsBusqueda[index],
                       press: () => Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (context) => DetailsScreen(
-                              product: products[index],
+                              product: productsBusqueda[index],
                             ),
                           )),
                     )

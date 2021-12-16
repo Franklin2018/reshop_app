@@ -69,5 +69,24 @@ List<Product> products = [
   ),
 ];
 
+
+List<Product> productsBusqueda = [
+  Product(
+      id: 1,
+      title: "Maltin",
+      precio: 234,
+      tamanio: 12,
+      descripcion: dummyText,
+      image: "assets/images/img1.png",
+      color: Color(0xFF3D82AE)),
+  Product(
+      id: 2,
+      title: "Red Bull",
+      precio: 234,
+      tamanio: 11,
+      descripcion: dummyText,
+      image: "assets/images/img4.png",
+      color: Color(0xFFE6B398)),
+];
 String dummyText =
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. When an unknown printer took a galley.";
